@@ -1,0 +1,42 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id = "exercise">
+  
+  <div>
+    <button v-on:click = "alert('Pressed button...')"> Alert </button>
+  </div>
+  
+  <p>
+    <input type="text" v-on:keydown = "keepValue" > : {{value}}
+  </p>
+  
+  <p>
+    <input type="text" v-on:keydown.enter = "keepValue2" > : {{value2}}
+  </p>
+  
+  
+</div>
+
+<script>
+new Vue({
+	el : "#exercise",
+  data : {
+  	value : "",
+    value2 : ""
+  },
+  methods : {
+  	alert : function(message){
+    	alert(message);
+    },
+    keepValue : function(event){
+    	this.value = event.target.value;
+      return value;
+    },
+    keepValue2 : function(event){
+    	this.value2 = event.target.value;
+      return value;
+    }
+  }
+  
+});
+</script>
