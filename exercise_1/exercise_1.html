@@ -1,0 +1,38 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id = "exercise">
+  <p> {{Name}} {{SecondName}} {{Age}} </p>
+  
+  <p> {{Age*5}} </p>
+  
+  <p> {{ randomNumber() }} </p>
+  
+  <img v-bind:src="imgSrc" alt="sonbahar" width="300" height="300">
+  
+  <p><input type="text" v-on:input = "changeName" ></p>
+
+  <p><input type="text" v-model:value = "SecondName"></p>
+
+</div>
+
+<script>
+new Vue({
+	el : "#exercise",
+  data : {
+  	Name : "Halil",
+    SecondName : "ibrahim",
+    Age : 23,
+    imgSrc : "http://www.sudanhikayeler.com/wp-content/uploads/2016/10/sonbahar-e1475623562322.jpg"
+    
+    },
+    methods : {
+      randomNumber : function() {
+        return Math.random()
+      },
+      changeName : function(event) {
+      	this.Name = event.target.value
+      }
+    } 
+});
+</script>
+
