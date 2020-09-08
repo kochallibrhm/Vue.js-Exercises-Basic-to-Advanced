@@ -1,0 +1,35 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="conditions">
+
+  <p> {{counter}} is an...
+
+    <h v-if="counter % 2 == 0">Even Number</h>
+    <h v-else>Odd Number</h>
+
+  </p>
+
+  <button @click="counter++">Increase</button>
+
+  <p v-show="show">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales, nisl id consectetur consequat, sapien libero eleifend lorem, ac consectetur diam dui nec diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi accumsan lobortis quam. Donec ac sollicitudin justo, nec ullamcorper purus. Proin facilisis tortor sem, in lobortis diam consectetur in. Vivamus congue blandit volutpat. Morbi tortor lacus, ullamcorper eu odio sit amet, aliquam cursus arcu. Nam lobortis orci eu consectetur lobortis. Sed dui erat, pulvinar nec bibendum ut, sagittis non erat.</p>
+  
+  <button @click="show = !show">Show/Hide</button>
+
+
+</div>
+
+<script>
+
+new Vue({
+
+	el : "#conditions",
+  
+  data : {
+  	counter : 0,
+    show : true
+  }
+  
+
+});
+
+</script>
