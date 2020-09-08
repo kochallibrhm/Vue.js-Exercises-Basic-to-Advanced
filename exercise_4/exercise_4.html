@@ -1,0 +1,47 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="odev3">
+   
+    <div>
+        <p>Current Value: {{ value }}</p>
+        <button @click="value+=5">Add 5</button>
+        <button @click="value+=1">Add 1</button>
+        <p>{{ result }}</p>
+    </div>
+    
+    <div>
+        <input v-model  = "time" type="text">
+        <p>{{ value }}</p>
+    </div>
+</div>
+
+<script>
+
+new Vue({
+	
+    el : "#odev3",
+    
+    data : {
+      value : 0,
+      time : 5000
+    },
+    
+    computed : {
+        result : function() {
+          console.log("result worked...");
+          return this.value == 33 ? "Completed..." : "Not yet";
+      }
+    },
+    
+    watch : {
+        result : function(value){
+          vm = this;
+        setTimeout(function(){
+            vm.value = 0;
+        } , this.time)
+      }
+    }
+  
+  });
+
+</script>
