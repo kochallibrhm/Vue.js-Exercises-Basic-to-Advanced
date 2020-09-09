@@ -1,0 +1,68 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id = "exercise5">
+  <div 
+    @click = "attached = !attached" 
+    :class =  "divClass" 
+    class = "box"> </div>
+  
+  <div 
+    @click = "attached = !attached" 
+    :class =  "{yellow : attached, blue : !attached}" 
+    class = "box"></div>
+  <div 
+    @click = "attached = !attached" 
+    :class =  "[color, {yellow: attached}]"
+    class = "box"></div>
+    <p><input type="text" v-model = "color"></p>
+</div>
+
+<style type="text/css">
+  
+  .box{
+  width : 100px;
+  height : 100px;
+  margin : 5px;
+  background-color : green;
+  display : inline-block;
+  }
+  
+.yellow{
+  background-color : yellow;
+}
+
+.blue{
+  background-color : blue;
+}
+
+.orange{
+  background-color : orange;
+}
+.purple{
+  background-color : purple;
+}
+
+</style>
+
+<script type="text/javascript">
+  
+  new Vue({
+
+  el: "#exercise5",
+
+  data: {
+    attached: false,
+    color : "orange" 
+  },
+  computed: {
+    divClass: function() {
+      return {
+        yellow: this.attached,
+        blue: !this.attached
+      }
+    }
+  }
+
+});
+
+</script>
