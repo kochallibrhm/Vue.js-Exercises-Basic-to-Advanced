@@ -1,0 +1,45 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="vforexamples">
+  <ul>
+    <li v-for="personal in persons"> 
+      <ul>
+        <li v-for = "(personal, key) in personal" :key = "product">  <strong>{{key}}</strong> :  {{personal}} </li>
+      </ul>
+    </li>
+
+  </ul>
+  <ul>
+    <li v-for="(product, index) in products"> {{index}}.. {{product}} </li>
+  </ul>
+  <button @click = "products.push('keyboard')">ADD</button>
+  <p>
+    <span v-for = "i in 5"> {{i}} </span>
+  </p>
+  
+</div>
+
+
+<script type="text/javascript">
+  
+  new Vue({
+  el : "#vforexamples",
+  data: {
+    products: ["Desktop","Laptop", "Desk", "Headphone"],
+    persons: [{
+        name: "Ahmet",
+        email: "ahmet@g.com"
+      },
+      {
+        name: "Kamil",
+        email: "kamil@g.com"
+      },
+      {
+        name: "Yiğit",
+        email: "yigit@g.com"
+      }
+    ]
+  }
+});
+
+</script>
