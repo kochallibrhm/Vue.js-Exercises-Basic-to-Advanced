@@ -1,0 +1,1 @@
+We are using "$refs". And binding Vue instance and template with using mount
