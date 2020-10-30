@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+        <title>Instance LifeCycle</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <h1> {{ title }} </h1>
+            <p>{{ info }}</p>
+            <button @click = "title =  'Changed...'" >Change Title</button>
+            <button @click = "destroy">Destroy</button>
+        </div>
+        
+    </body>
+    <script src="app.js"></script>
+
+</html>
