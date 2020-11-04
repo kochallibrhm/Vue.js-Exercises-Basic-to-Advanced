@@ -34,7 +34,8 @@ export default {
     },
     increaseIq(){
       this.iqlevel = 30;
-      eventBus.$emit("iqlevel", this.iqlevel);
+      //eventBus.$emit("iqlevel", this.iqlevel);
+      eventBus.increaseIq(this.iqlevel);
     }
   }
 }
