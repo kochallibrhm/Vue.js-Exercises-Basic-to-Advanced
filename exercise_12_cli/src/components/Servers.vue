@@ -5,7 +5,7 @@
           <li
             class="list-group-item"
             v-for="index in 5" :key = "index.id">
-            Sunucu #{{ index }}
+            Server #{{ index }}
           </li>
         </ul>
       </div>

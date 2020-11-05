@@ -1,5 +1,5 @@
 <template>
     <div class="col-xs-12 col-sm-6">
-        <p>Sunucu Bilgisi güncel değil!!</p>
+        <p>Server Status is out of date!!</p>
       </div>
 </template>
