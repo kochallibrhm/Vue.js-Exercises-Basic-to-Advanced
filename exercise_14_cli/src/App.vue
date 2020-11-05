@@ -10,12 +10,9 @@
     <app-info></app-info>
     </div>
     <app-footer></app-footer>
-   
       
-    
-    
-    
   </div>
+  
 </template>
 
 <script>
